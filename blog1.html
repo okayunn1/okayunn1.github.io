@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How I Won the $50 Homelab Lottery | Okayunn's Blog</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+
+  <style>
+    body {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    article time {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    article h2 {
+      margin-top: 2.2rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      opacity: 0.8;
+      margin: 3rem 0 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Okayunn's&nbsp;Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>How I Won the $50 Homelab Lottery</h1>
+      <time datetime="2025-06-01">June&nbsp;1, 2025</time>
+
+      <p>
+        June first, my birthday—rolled around, which means one thing: relatives handing me cash.
+        I already rent a few VPSes for assorted projects, but I’d been itching for some on-prem horsepower.
+      </p>
+
+      <p>
+        Scrolling OfferUp (think Facebook Marketplace’s cousin for those that don't know), I spot:
+        <strong>“Dell OptiPlex 3050 SFF - $50.”</strong> Fifty bucks? Say less.
+      </p>
+
+      <p>
+        The listing promised an “i5 7th-gen, up to 32 GB DDR4 (config varies).” I paid the guy in a Home Depot
+        parking lot, and drove home with my new “server.” He mentioned it came
+        from a bank and the fleet had just fallen out of warranty. Bank’s loss, my gain.
+      </p>
+
+      <p>
+        But the case sticker said <em>i3</em>? Suspicious.
+      </p>
+
+      <h2>Pop the lid</h2>
+      <ul>
+        <li>0× SSD (expected)</li>
+        <li>1× 8 GB stick-DDR4-3200 on an “old” box?!</li>
+      </ul>
+
+      <h2>BIOS time</h2>
+      <p>
+        I boot into setup and <em>cue Zelda chest-opening SFX</em>, it reports an
+        <strong>i3-10100 (10th-gen Comet Lake)</strong>. Wait, what? Turns out I’d
+        accidentally scored an <strong>OptiPlex 3080</strong>. 🤑🤑🤑
+      </p>
+
+      <h2>Quick upgrades</h2>
+      <p>I threw money at Amazon, grabbed a spare HDD and a screw for the NVMe I had laying around and installed:</p>
+      <ul>
+        <li>32 GB DDR4 (dual-channel RAM)</li>
+        <li>512 GB NVMe SSD</li>
+        <li>1 TB 7 200 RPM “spinning rust” I rescued from e-waste last year </li>
+      </ul>
+
+      <h2>The stack</h2>
+      <ul>
+        <li><strong>Proxmox VE</strong> because KVM is cool</li>
+        <li><strong>OpenWRT VMs</strong>
+          <ul>
+            <li>Router-A: WireGuard to a $2/mo DartNode VPS (CGNAT, begone)</li>
+            <li>Router-B: Mullvad for… reasons</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>What’s next?</h2>
+      <ul>
+        <li>Flip the OptiPlex for a quieter enterprise workstation with more drive-bays and allows me to expand on it more</li>
+        <li>Proper ZFS mirrors or hardware RAID</li>
+        <li>Symmetric fiber the second I move somewhere that has <strong>ACTUAL</strong> internet</li>
+      </ul>
+
+      <p>
+        This rig is my first <em>real</em> homelab box. I did have an old gaming laptop + Raspberry Pi 4, but this is much nicer.
+        Cloud’s fine, but nothing beats tinkering with bare-metal you bought for less than a nice dinner.
+      </p>
+
+      <p>
+        If you’ve ever thought about homelabbing, do it. Even a tiny setup teaches you tons and
+        sometimes the marketplace gods hand you a $50 Comet-Lake miracle.
+      </p>
+    </article>
+
+    <footer>
+      <a href="index.html">← Back to Home</a>
+    </footer>
+  </main>
+</body>
+</html>
